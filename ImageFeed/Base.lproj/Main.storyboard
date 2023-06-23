@@ -207,9 +207,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="cZD-M7-7xk" userLabel="Image View">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ef8-05-X43">
                                 <rect key="frame" x="8" y="67" width="48" height="48"/>
                                 <constraints>
@@ -222,32 +219,57 @@
                                     <action selector="didTapBackButton" destination="2N2-x1-vUY" eventType="touchUpInside" id="Afo-Ci-h5e"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2kK-bh-SYu">
+                                <rect key="frame" x="171.66666666666666" y="732" width="50" height="50"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="Sharing"/>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sQN-lQ-3py">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="cZD-M7-7xk" userLabel="Image View">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="132"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="cZD-M7-7xk" secondAttribute="bottom" id="NFX-KU-BOo"/>
+                                    <constraint firstItem="cZD-M7-7xk" firstAttribute="top" secondItem="sQN-lQ-3py" secondAttribute="top" id="Pmn-He-MxT"/>
+                                    <constraint firstAttribute="trailing" secondItem="cZD-M7-7xk" secondAttribute="trailing" id="QC6-cu-weF"/>
+                                    <constraint firstItem="cZD-M7-7xk" firstAttribute="leading" secondItem="sQN-lQ-3py" secondAttribute="leading" id="Sku-7D-mAx"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="TNA-k0-8xe"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="0mk-hh-zzK"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oaZ-00-d9F"/>
                         <color key="backgroundColor" name="Black"/>
                         <constraints>
-                            <constraint firstItem="oaZ-00-d9F" firstAttribute="bottom" secondItem="cZD-M7-7xk" secondAttribute="bottom" id="4VR-zZ-ooH"/>
-                            <constraint firstItem="oaZ-00-d9F" firstAttribute="trailing" secondItem="cZD-M7-7xk" secondAttribute="trailing" id="G57-LD-L3F"/>
-                            <constraint firstItem="cZD-M7-7xk" firstAttribute="leading" secondItem="oaZ-00-d9F" secondAttribute="leading" id="T4e-JD-sx7"/>
-                            <constraint firstItem="cZD-M7-7xk" firstAttribute="top" secondItem="oaZ-00-d9F" secondAttribute="top" id="YYv-fb-3Pu"/>
-                            <constraint firstItem="Ef8-05-X43" firstAttribute="leading" secondItem="oaZ-00-d9F" secondAttribute="leading" constant="8" id="nwG-bb-reo"/>
-                            <constraint firstItem="Ef8-05-X43" firstAttribute="top" secondItem="oaZ-00-d9F" secondAttribute="top" constant="8" id="uhV-FR-V7y"/>
+                            <constraint firstItem="oaZ-00-d9F" firstAttribute="bottom" secondItem="2kK-bh-SYu" secondAttribute="bottom" constant="36" id="7e3-Pq-OuX"/>
+                            <constraint firstItem="2kK-bh-SYu" firstAttribute="centerX" secondItem="oaZ-00-d9F" secondAttribute="centerX" id="DwT-yk-swE"/>
+                            <constraint firstItem="Ef8-05-X43" firstAttribute="leading" secondItem="oaZ-00-d9F" secondAttribute="leading" constant="8" id="Fpv-2s-fLr"/>
+                            <constraint firstItem="sQN-lQ-3py" firstAttribute="top" secondItem="BXK-vB-AkF" secondAttribute="top" id="Qhv-rz-6c4"/>
+                            <constraint firstAttribute="bottom" secondItem="sQN-lQ-3py" secondAttribute="bottom" id="VYk-HJ-6Hs"/>
+                            <constraint firstItem="Ef8-05-X43" firstAttribute="top" secondItem="oaZ-00-d9F" secondAttribute="top" constant="8" id="fIo-l5-3Ai"/>
+                            <constraint firstItem="sQN-lQ-3py" firstAttribute="leading" secondItem="oaZ-00-d9F" secondAttribute="leading" id="hAV-S0-rwY"/>
+                            <constraint firstItem="sQN-lQ-3py" firstAttribute="trailing" secondItem="oaZ-00-d9F" secondAttribute="trailing" id="nlc-Nh-ofC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="FkK-Fm-bPV"/>
                     <connections>
                         <outlet property="imageView" destination="cZD-M7-7xk" id="QxC-29-5Vf"/>
+                        <outlet property="scrollView" destination="sQN-lQ-3py" id="ilr-h5-ZbZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ckn-JY-0g5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="199" y="-1439"/>
+            <point key="canvasLocation" x="197.70992366412213" y="-1439.4366197183099"/>
         </scene>
     </scenes>
     <resources>
         <image name="0" width="200" height="132"/>
         <image name="Active" width="44" height="44"/>
         <image name="Backward" width="24" height="24"/>
+        <image name="Sharing" width="50" height="50"/>
         <image name="avatar" width="70" height="70"/>
         <image name="logout_button" width="24" height="24"/>
         <image name="tab_editorial_active" width="30" height="30"/>
