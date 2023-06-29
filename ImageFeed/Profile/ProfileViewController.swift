@@ -48,10 +48,6 @@ final class ProfileViewController: UIViewController {
         return logoutButton
     }()
     
-//    override var preferredStatusBarStyle: UIStatusBarStyle {
-//        return .lightContent
-//    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViewControler()
